@@ -1,3 +1,3 @@
 from naoqi import ALProxy
-tts = ALProxy("ALTextToSpeech", "<IP of your robot>", 9559)
+tts = ALProxy("ALTextToSpeech", "169.254.133.122", 9559)
 tts.say("Hello, world!")
