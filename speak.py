@@ -1,3 +1,4 @@
 from naoqi import ALProxy
-tts = ALProxy("ALTextToSpeech", "169.254.133.122", 9559)
-tts.say("Hello, world!")
+from naoip import NAOIP
+tts = ALProxy("ALTextToSpeech", NAOIP, 9559)
+tts.say("Dag oma")
