@@ -15,8 +15,6 @@ basicawarenessProxy.startAwareness()
 basicawarenessProxy.setStimulusDetectionEnabled("people", True)
 basicawarenessProxy.setStimulusDetectionEnabled("sound", True)
 
-basicawarenessProxy.setEngagementMode("SemiEngaged")
-print basicawarenessProxy.getEngagementMode()
 
 
 print peopleperceptionProxy.isFaceDetectionEnabled()
@@ -26,8 +24,25 @@ peopleperceptionProxy.setMaximumDetectionRange(1)
 
 print facedetectionProxy.getLearnedFacesList()
 
-memoryProxy.raiseEvent("FaceDetected", "Rinske")
+TimeStamp = 1
+FaceInfo = 1
+N = 1
+Time_Filtered_Reco_Info = 1
+CameraPose_InTorsoFrame = 1
+CameraPose_InRobotFrame = 1
+Camera_Id = 1
 
+
+dataFaceDetected =[
+    TimeStamp,
+    [ FaceInfo[N], Time_Filtered_Reco_Info ],
+    CameraPose_InTorsoFrame,
+    CameraPose_InRobotFrame,
+    Camera_Id
+]
+ 
+
+print memoryProxy.raiseEvent("FaceDetection/FaceDetected", dataFaceDetected)
 
 
 
