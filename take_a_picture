@@ -1,0 +1,8 @@
+
+from naoqi import ALProxy
+from naoip import NAOIP
+pictureProxy = ALProxy("ALPhotoCapture", NAOIP, 9559)
+
+photoCaptureProxy.setResolution(2)
+photoCaptureProxy.setPictureFormat("jpg")
+photoCaptureProxy.takePictures(1, "/home/nao/recordings/cameras/", "image")
