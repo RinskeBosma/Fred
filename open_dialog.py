@@ -8,7 +8,9 @@ from naoqi import ALProxy
 from naoip import NAOIP
 
 dialogProxy = ALProxy("ALDialog", NAOIP, 9559)
-dialogProxy.setLanguage("English")
+behaviorProxy = ALProxy("ALBehaviorManager", NAOIP, 9559)
+
+
 
 print dialogProxy.getUserList()
 
@@ -18,5 +20,6 @@ dialogProxy.activateTopic('dlg_how_are_you')
 print dialogProxy.getActivatedTopics
 
 dialogProxy.gotoTopic('dlg_how_are_you')
-dialogProxy.startPush()
 
+
+dialogProxy.forceOutput()
